@@ -19,7 +19,7 @@ The main story is that Elist reached its strongest revenue year in 2020, stayed 
 
 ![Sales trend from 2019 to 2022](images/sales_trend_2019_2022.png)
 
-Sales increased from $3.9M in 2019 to $10.2M in 2020. Revenue remained strong in 2021 at $9.1M, but dropped to $5.0M in 2022. This shows that Elist experienced a major growth spike in 2020 before losing momentum by 2022.
+Sales increased from $3.9M in 2019 to $10.2M in 2020. Revenue remained strong in 2021 at $9.1M, but dropped to $5.0M in 2022. The 2020 spike may have been influenced by pandemic driven demand for electronics, as customers spent more time working, learning, and shopping from home. By 2022, the decline suggests that Elist may have lost some of that temporary momentum as customer behavior normalized.
 
 ## Revenue by Country
 
@@ -37,11 +37,11 @@ Revenue was concentrated in a small group of products. The 27 inch 4K Gaming Mon
 
 ![Refund rate heat map](images/refund_rate_heat_map.png)
 
-Refund rates were highest in 2019 for products such as the MacBook Air, ThinkPad Laptop, and Apple iPhone. By 2022, refund rates dropped to 0% across the top products shown. This could suggest improvements in product quality, customer expectations, fulfillment, or refund tracking.
+Refund rates were highest in 2019 for products such as the MacBook Air, ThinkPad Laptop, and Apple iPhone. By 2022, refund rates dropped to 0% across the top products shown. This could suggest improvements in product quality, customer expectations, fulfillment, or refund tracking. 
 
 ## Business Takeaways
 
-Elist’s strongest revenue period came in 2020, but the sharp decline by 2022 shows that the company may need to rebuild sales momentum. The business should protect its strongest revenue sources, especially U.S. customers and top performing products like monitors, AirPods, and MacBooks.
+Elist’s strongest revenue period came in 2020, which may have been supported by pandemic driven demand for electronics and online purchasing. However, the sharp decline by 2022 shows that the company may need to rebuild sales momentum as customer behavior normalized. The business should protect its strongest revenue sources, especially U.S. customers and top performing products like monitors, AirPods, and MacBooks.
 
 The drop in refund rates is a positive signal, but it should be reviewed carefully. Elist should confirm whether refunds declined because customer satisfaction improved, because product quality improved, or because refund tracking changed.
 
