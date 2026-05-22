@@ -1,69 +1,105 @@
-# Elist E-Commerce Business Analysis
+# Elist Electronics Sales Analysis
 Owen Campbell
 
-This project analyzes e-commerce transaction data from Elist using Excel for exploratory analysis and SQL in BigQuery to answer key business questions related to sales performance, delivery times, refunds, and customer behavior.
+## Overview
+
+This project analyzes transactional, customer, and operational data for Elist, a global e-commerce electronics retailer, to better understand sales trends, customer behavior, product performance, refunds, and delivery efficiency. The analysis was completed using Excel, SQL in Google BigQuery, and Tableau.
+
+## Dashboard Preview
+
+![Elist Electronics Sales Dashboard](images/elist_electronics_sales_dashboard.png)
+
+The dashboard highlights the main findings from the analysis, including revenue trends, top revenue generating products, refund rates by product, and countries with the longest average delivery times.
+
+## Business Problem
+
+Elist collects transactional and customer data through its e-commerce platform, but the raw data needs to be organized and analyzed before it can support business decisions.
+
+## Objectives
+
+- Analyze overall sales and order trends over time
+- Evaluate customer purchasing behavior
+- Identify products with high refund rates
+- Compare delivery performance across regions
+- Compare loyalty and non-loyalty customer purchasing behavior
+- Identify top performing products by revenue
 
 ## Dataset
-- Source: Elist e-commerce dataset (Christina Jiang)
-- Format: Excel (.xlsx)
 
-### Data Preparation
-- Used the `orders_data_clean` worksheet from the Excel file
-- Cleaned and structured the data for analysis
-- Loaded into BigQuery as the `orders` table
+The dataset contains transactional and customer level e-commerce data for Elist, including:
+- orders and revenue
+- products and refunds
+- delivery performance
+- customer regions
+- purchase platform data
+- loyalty program participation
 
-### Key Fields
-- purchase_ts: purchase date
-- delivery_ts: delivery date
-- refund_ts: refund date (if applicable)
-- product_name: product purchased
-- usd_price: order value
-- country_code: customer region
-- purchase_platform: website vs mobile
-- loyalty_program: 1 (yes) / 0 (no)
-- created_on: account creation date
+## Tools Used
 
-## Business Questions
+- Excel
+- Google BigQuery
+- SQL
+- Tableau
+- VS Code
+- GitHub
 
-1. What were the order counts, sales, and AOV for MacBooks in North America by quarter?
-2. Which region has the highest average delivery time?
-3. What is the refund rate per product?
-4. What is the most popular product in each region?
-5. How does time to purchase differ between loyalty vs non-loyalty customers?
+## Data Cleaning & Preparation
+
+- Used the `orders_data_clean` worksheet from the Excel workbook
+- Cleaned and structured the dataset for analysis
+- Loaded the dataset into Google BigQuery as the `orders` table
+- Validated date fields and transactional records before analysis
+
+## Exploratory Analysis
+
+The exploratory analysis focused on identifying trends in:
+- revenue and order growth
+- average order value
+- regional delivery performance
+- refund behavior by product
+- customer purchasing activity
+- loyalty program participation
+
+## Key Business Questions
+
+- How did revenue trend from 2019 through 2022?
+- Which products generated the highest total revenue?
+- Which products had the highest refund rates?
+- Which countries experienced the longest average delivery times?
+- Did loyalty program members purchase more quickly than non-loyalty customers?
 
 ## Key Insights
 
 ### Sales Trends
-- Sales peaked in 2020 (+162%), driven by strong order growth
-- Declined in 2021 (-10%) and sharply in 2022 (-45%)
-- Changes driven primarily by order volume rather than AOV
+- Sales peaked in 2020 due to strong order growth
+- Revenue declined in 2021 and 2022 as order volume decreased
+- Average order value remained relatively stable compared to changes in total sales volume
 
 ### Delivery Performance
-- Delivery times vary by region, with some regions significantly slower
-- Most regions fall within a similar delivery range (~7–10 days), with a few outliers driving higher averages
+- Most regions averaged delivery times between 7 to 10 days
+- A small number of regions experienced noticeably longer delivery times than the overall average
 
 ### Refund Behavior
-- Refund rates are relatively low overall
-- ThinkPad Laptop has the highest refund rate among products
+- Refund rates were relatively low across most products
+- ThinkPad Laptop had the highest refund rate among analyzed products
 
-### Product Popularity
-- Apple AirPods are the most frequently purchased product across regions
+### Product Performance
+- The 27in 4K gaming monitor generated the highest total revenue, followed by Apple AirPods Headphones and MacBook Air Laptop
 
 ### Loyalty Program Impact
-- Minimal difference in time to purchase between groups (~101 vs ~107 days)
-- Loyalty program shows limited impact on purchasing speed
+- Loyalty program members purchased slightly sooner after account creation compared to non-members
+- The difference between groups was relatively small overall
 
-## Tools Used
+## Recommendations
 
-- Excel (pivot tables)
-- Google BigQuery (SQL)
-- VS Code
-- GitHub
+- Investigate products with elevated refund rates to identify possible quality or customer expectation issues
+- Review delivery performance in slower regions to improve customer experience
+- Continue monitoring top performing products to support inventory and marketing decisions
+- Explore ways to increase the effectiveness of the loyalty program through stronger customer incentives
 
 ## Project Files
 
-- business_analysis.sql → SQL queries
-- elist_transactions_data_pipeline.xlsx → data + pivot analysis
-- README.md → project summary
-
-All SQL queries used in this analysis are included in the repository.
+- `business_analysis.sql` → SQL queries used throughout the analysis
+- `elist_transactions_data_pipeline.xlsx` → cleaned dataset and Excel analysis
+- `images/` → dashboard screenshot used in the README
+- `README.md` → project documentation and summary
