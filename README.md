@@ -1,105 +1,62 @@
 # Elist Electronics Sales Analysis
+
 Owen Campbell
 
 ## Overview
 
-This project analyzes transactional, customer, and operational data for Elist, a global e-commerce electronics retailer, to better understand sales trends, customer behavior, product performance, refunds, and delivery efficiency. The analysis was completed using Excel, SQL in Google BigQuery, and Tableau.
+This project analyzes sales, product, country, and refund data for Elist, a global electronics retailer. The goal was to understand how revenue changed from 2019 to 2022, which countries and products drove the most sales, and how refund rates changed across top products.
 
-## Dashboard Preview
+The main story is that Elist reached its strongest revenue year in 2020, stayed strong in 2021, then declined sharply in 2022. Revenue was heavily supported by U.S. customers and a small group of top products, while refund rates improved across the products analyzed.
 
-![Elist Electronics Sales Dashboard](images/elist_electronics_sales_dashboard.png)
+## Key Findings
 
-The dashboard highlights the main findings from the analysis, including revenue trends, top revenue generating products, refund rates by product, and countries with the longest average delivery times.
+* Sales peaked in 2020 at $10.2M before dropping to $5.0M in 2022.
+* U.S. customers contributed the largest share of revenue every year.
+* Monitors, AirPods, and MacBooks were the strongest product revenue drivers.
+* Refund rates dropped to 0% across the top products shown by 2022.
 
-## Business Problem
+## Sales Trend
 
-Elist collects transactional and customer data through its e-commerce platform, but the raw data needs to be organized and analyzed before it can support business decisions.
+![Sales trend from 2019 to 2022](images/sales_trend_2019_2022.png)
 
-## Objectives
+Sales increased from $3.9M in 2019 to $10.2M in 2020. Revenue remained strong in 2021 at $9.1M, but dropped to $5.0M in 2022. This shows that Elist experienced a major growth spike in 2020 before losing momentum by 2022.
 
-- Analyze overall sales and order trends over time
-- Evaluate customer purchasing behavior
-- Identify products with high refund rates
-- Compare delivery performance across regions
-- Compare loyalty and non-loyalty customer purchasing behavior
-- Identify top performing products by revenue
+## Revenue by Country
 
-## Dataset
+![Revenue by country code](images/country_code_revenue_share.png)
 
-The dataset contains transactional and customer level e-commerce data for Elist, including:
-- orders and revenue
-- products and refunds
-- delivery performance
-- customer regions
-- purchase platform data
-- loyalty program participation
+U.S. customers contributed the largest share of revenue each year. Other countries added revenue, but the business was clearly most dependent on the U.S. market. Because of this, changes in U.S. customer demand likely had the biggest impact on overall sales performance.
+
+## Product Revenue
+
+![Product revenue heat map](images/product_revenue_heat_map.png)
+
+Revenue was concentrated in a small group of products. The 27 inch 4K Gaming Monitor, Apple AirPods, and MacBook Air were the strongest revenue drivers from 2019 to 2022. These products should be prioritized when reviewing sales performance, inventory planning, and marketing strategy.
+
+## Refund Rate Analysis
+
+![Refund rate heat map](images/refund_rate_heat_map.png)
+
+Refund rates were highest in 2019 for products such as the MacBook Air, ThinkPad Laptop, and Apple iPhone. By 2022, refund rates dropped to 0% across the top products shown. This could suggest improvements in product quality, customer expectations, fulfillment, or refund tracking.
+
+## Business Takeaways
+
+Elist’s strongest revenue period came in 2020, but the sharp decline by 2022 shows that the company may need to rebuild sales momentum. The business should protect its strongest revenue sources, especially U.S. customers and top performing products like monitors, AirPods, and MacBooks.
+
+The drop in refund rates is a positive signal, but it should be reviewed carefully. Elist should confirm whether refunds declined because customer satisfaction improved, because product quality improved, or because refund tracking changed.
 
 ## Tools Used
 
-- Excel
-- Google BigQuery
-- SQL
-- Tableau
-- VS Code
-- GitHub
-
-## Data Cleaning & Preparation
-
-- Used the `orders_data_clean` worksheet from the Excel workbook
-- Cleaned and structured the dataset for analysis
-- Loaded the dataset into Google BigQuery as the `orders` table
-- Validated date fields and transactional records before analysis
-
-## Exploratory Analysis
-
-The exploratory analysis focused on identifying trends in:
-- revenue and order growth
-- average order value
-- regional delivery performance
-- refund behavior by product
-- customer purchasing activity
-- loyalty program participation
-
-## Key Business Questions
-
-- How did revenue trend from 2019 through 2022?
-- Which products generated the highest total revenue?
-- Which products had the highest refund rates?
-- Which countries experienced the longest average delivery times?
-- Did loyalty program members purchase more quickly than non-loyalty customers?
-
-## Key Insights
-
-### Sales Trends
-- Sales peaked in 2020 due to strong order growth
-- Revenue declined in 2021 and 2022 as order volume decreased
-- Average order value remained relatively stable compared to changes in total sales volume
-
-### Delivery Performance
-- Most regions averaged delivery times between 7 to 10 days
-- A small number of regions experienced noticeably longer delivery times than the overall average
-
-### Refund Behavior
-- Refund rates were relatively low across most products
-- ThinkPad Laptop had the highest refund rate among analyzed products
-
-### Product Performance
-- The 27in 4K gaming monitor generated the highest total revenue, followed by Apple AirPods Headphones and MacBook Air Laptop
-
-### Loyalty Program Impact
-- Loyalty program members purchased slightly sooner after account creation compared to non-members
-- The difference between groups was relatively small overall
-
-## Recommendations
-
-- Investigate products with elevated refund rates to identify possible quality or customer expectation issues
-- Review delivery performance in slower regions to improve customer experience
-- Continue monitoring top performing products to support inventory and marketing decisions
-- Explore ways to increase the effectiveness of the loyalty program through stronger customer incentives
+* Excel
+* Google BigQuery
+* SQL
+* Tableau Public
+* VS Code
+* GitHub
 
 ## Project Files
 
-- `business_analysis.sql` → SQL queries used throughout the analysis
-- `elist_transactions_data_pipeline.xlsx` → cleaned dataset and Excel analysis
-- `images/` → dashboard screenshot used in the README
-- `README.md` → project documentation and summary
+* `business_analysis.sql` contains the SQL queries used for the analysis.
+* `elist_transactions_data_pipeline.xlsx` contains the cleaned dataset and Excel work.
+* `images/` contains the Tableau visuals used in this README.
+* `README.md` contains the project summary and business findings.
